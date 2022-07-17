@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'z-1$0s3m=ycu^haba71ogrf^woeye)%xas=()iun90z=5eurv6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com','.elasticbeanstalk.com','127.0.0.1','www.theislamicnation.com','theislamicnation.com']
 
