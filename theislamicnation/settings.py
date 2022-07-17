@@ -36,7 +36,6 @@ ALLOWED_HOSTS = ['.herokuapp.com','127.0.0.1','www.theislamicnation.com','theisl
 from firebase_admin import initialize_app
 PROJECT_APP = os.path.basename(BASE_DIR)
 
-cred = credentials.Certificate(os.path.join(BASE_DIR, 'theislamicnation-c15eb-firebase-adminsdk-felkr-67494d9fd2.json'))
 """
 cred = credentials.Certificate({
     "type": "service_account",
@@ -51,7 +50,6 @@ cred = credentials.Certificate({
     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/theislamicnation@theislamicnation.iam.gserviceaccount.com"
 	# "token_uri": "https://accounts.google.com/o/oauth2/token", 
 })"""
-FIREBASE_APP = initialize_app(cred)
 # Application definition
 GDAL_LIBRARY_PATH = '/app/.heroku/vendor/lib/libgdal.so'  # or os.getenv('...') and overriding it in Heroku app configuration
 
@@ -69,14 +67,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 
     'dj_rest_auth',
-    'allauth',
-    'allauth.account',
-    'knox',
-    'knox_allauth.apps.KnoxAllauthConfig',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.twitter',
+
     # Local Apps (Your project's apps)
     'chat',
     'theislamicnation',
@@ -95,7 +86,11 @@ INSTALLED_APPS = [
   #  'djstripe', #add this
     "rest_framework_recaptcha",
     "fcm_django",
-    "report"
+    "report",
+    'allauth',
+    'knox',
+    'knox_allauth'
+
     
 ]
 
@@ -217,7 +212,7 @@ TEMPLATES = [
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
+    #'allauth.account.auth_backends.AuthenticationBackend',
 )
 
 REST_FRAMEWORK = {
