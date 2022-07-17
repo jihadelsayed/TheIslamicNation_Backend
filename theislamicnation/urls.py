@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 from django.conf import settings
-from fcm_django.api.rest_framework import FCMDeviceAuthorizedViewSet
+#from fcm_django.api.rest_framework import FCMDeviceAuthorizedViewSet
 
 #from personal.views import (
 #	home_screen_view,
@@ -35,7 +35,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('', include('report.urls')),
     path('', include('Checkout.urls')),
-    path('devices', FCMDeviceAuthorizedViewSet.as_view({'post': 'create'}), name='create_fcm_device'),
+    #path('devices', FCMDeviceAuthorizedViewSet.as_view({'post': 'create'}), name='create_fcm_device'),
 
     
     #path("stripe/", include("djstripe.urls", namespace="djstripe")), #add this

@@ -12,10 +12,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 
 from pathlib import Path
-from decouple import config
+#from decouple import config
 from datetime import timedelta
-from firebase_admin import credentials
-from rest_framework.settings import api_settings
+#from firebase_admin import credentials
+#from rest_framework.settings import api_settings
+#from firebase_admin import initialize_app
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,11 +30,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'z-1$0s3m=ycu^haba71ogrf^woeye)%xas=()iun90z=5eurv6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com','127.0.0.1','www.theislamicnation.com','theislamicnation.com']
 
-from firebase_admin import initialize_app
 PROJECT_APP = os.path.basename(BASE_DIR)
 
 """
@@ -65,8 +65,15 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework.authtoken',
-
     'dj_rest_auth',
+    'allauth',
+    'allauth.account',
+    'knox',
+    'knox_allauth.apps.KnoxAllauthConfig',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.twitter',
 
     # Local Apps (Your project's apps)
     'chat',
@@ -86,12 +93,8 @@ INSTALLED_APPS = [
   #  'djstripe', #add this
     "rest_framework_recaptcha",
     "fcm_django",
-    "report",
-    'allauth',
-    'knox',
-    'knox_allauth'
+    "report"
 
-    
 ]
 
 FCM_DJANGO_SETTINGS = {
