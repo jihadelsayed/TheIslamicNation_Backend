@@ -139,8 +139,8 @@ CHAT_WS_SERVER_PROTOCOL = 'ws' or 'wss'
 CORS_ORIGIN_ALLOW_ALL = True # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    'https://theislamicnation-c15eb.web.app',
-    'https://theislamicnation-c15eb.firebaseapp.com',
+    'https://theislamicnation-2222.web.app',
+    'https://theislamicnation-2222.firebaseapp.com',
     'https://www.theislamicnation.com',
     'https://theislamicnation.com',
     'http://127.0.0.1:8000',
@@ -152,8 +152,8 @@ CORS_ORIGIN_WHITELIST = [
 ]
 # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
 CORS_ORIGIN_REGEX_WHITELIST = [
-    'https://theislamicnation-c15eb.web.app',
-    'https://theislamicnation-c15eb.firebaseapp.com',
+    'https://theislamicnation-1111.web.app',
+    'https://theislamicnation-1111.firebaseapp.com',
     'https://www.theislamicnation.com',
     'https://theislamicnation.com',
     'http://127.0.0.1:8000',
@@ -287,6 +287,7 @@ DATABASES = {
         #},
     }
 }
+
 # set this to False if you want to turn off pyodbc's connection pooling
 DATABASE_CONNECTION_POOLING = False
 
@@ -372,7 +373,7 @@ AWS_S3_HOST = "s3.eu-north-1.amazonaws.com"
 AWS_S3_REGION_NAME="eu-north-1"
 AWS_ACCESS_KEY_ID = 'AKIA54ACSLZPCYZWKGVY'
 AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'theislamicnations3'
+AWS_STORAGE_BUCKET_NAME = 'palimagos3'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
@@ -384,9 +385,9 @@ IMAGEKIT_DEFAULT_IMAGE_CACHE_BACKEND = 'imagekit.imagecache.NonValidatingImageCa
 
 EMAIL_USE_TLS = False
 EMAIL_HOST = 'smtp.titan.email'
-EMAIL_HOST_USER = 'noreply@theislamicnation.com'
-DEFAULT_FROM_EMAIL = 'noreply@theislamicnation.com'
-SERVER_EMAIL = 'noreply@theislamicnation.com'
+EMAIL_HOST_USER = 'noreply@swapynet.com'
+DEFAULT_FROM_EMAIL = 'noreply@swapynet.com'
+SERVER_EMAIL = 'noreply@swapynet.com'
 EMAIL_HOST_PASSWORD = 'Free48palestine#'
 EMAIL_PORT = 465
 
