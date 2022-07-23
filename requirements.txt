@@ -70,3 +70,4 @@ tzdata==2022.1
 uritemplate==4.1.1
 urllib3==1.26.10
 zope.interface==5.4.0
+boto3==1.24.36
