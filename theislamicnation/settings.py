@@ -36,8 +36,11 @@ ALLOWED_HOSTS = ['theislamicnation.us-east-1.elasticbeanstalk.com','.herokuapp.c
 ,'www.theislamicnation.com',
 'account.theislamicnation.com',
 'account.neetechs.com',
+'api.neetechs.com',
 'neetechs.com',
-'theislamicnation.com']
+'theislamicnation.com'
+
+]
 
 PROJECT_APP = os.path.basename(BASE_DIR)
 
@@ -149,6 +152,7 @@ CORS_ORIGIN_WHITELIST = [
     'https://www.theislamicnation.com',
     'https://theislamicnation.com',
     'https://account.neetechs.com',
+    'https://api.neetechs.com',
     'https://neetechs.com',
     'http://127.0.0.1:8000',
     'http://localhost:8000',
